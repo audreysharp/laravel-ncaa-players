@@ -25,7 +25,6 @@ class CreateInitialPlayersTable extends Migration
           $table->integer('spg')->default(0);
           $table->integer('bpg')->default(0);
           $table->integer('tpg')->default(0);
-          $table->integer('rpg')->default(0);
           $table->float('fgPercent', 3, 2)->default(0.00);
           $table->float('ftPercent', 3, 2)->default(0.00);
           $table->float('tpPercent', 3, 2)->default(0.00);

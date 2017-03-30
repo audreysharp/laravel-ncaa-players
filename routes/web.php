@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Games collection routes
+Route::get('/players', 'PlayerController@index');
+Route::post('/players', 'PlayerController@create');
+
+// Games singular routes
+Route::get('/players/{id}', 'PlayerController@show');
+Route::put('/players/{id}', 'PlayerController@update');
+Route::delete('/players/{id}', 'PlayerController@destroy');
+
+// HTML/view responses
+Route::get('/', function() {
+  return view('home');
 });
